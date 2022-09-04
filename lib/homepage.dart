@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
               
               padding: EdgeInsets.all(10),
               margin: EdgeInsets.all(20),
-              child: Text("AKU Syllabus",style: TextStyle(
+              child: Text("AKU  Syllabus",style: TextStyle(
                 fontSize: 22,fontWeight: FontWeight.bold,color: Colors.white,
               ),),
             ),
