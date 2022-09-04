@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
     Container(
       padding: const EdgeInsets.all(8),
       color: Colors.teal[200],
-      child: const Text('Heed not the rabble'),
+      child: const Text('Heed not the r  abble'),
     ),
     Container(
       padding: const EdgeInsets.all(8),
