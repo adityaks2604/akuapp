@@ -11,39 +11,39 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack( 
-      children: [ 
-        Container(
-          height: MediaQuery.of(context).size.height,
-          width: MediaQuery.of(context).size.width,
-          // ignore: prefer_const_constructors
-          decoration: BoxDecoration(
-           gradient: LinearGradient( 
-            colors: [ 
-              Color(0xff213A50), Color(0xff071938)
-            ])
+      backgroundColor: Color.fromARGB(255, 111, 117, 120),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: Icon(Icons.menu ,),
+        title:
+        Center(
+          child: Container(
+            child: Text("AKU TECH", style: TextStyle(
+              fontWeight: FontWeight.bold,
+            ),),
           ),
         ),
-        
-         Column( 
-          
-          children: [
-            SizedBox(height: 50,),
-            Container( 
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Container(
               
-              padding: EdgeInsets.all(10),
-              margin: EdgeInsets.all(20),
-              child: Text("AKU  Syllabus",style: TextStyle(
-                fontSize: 22,fontWeight: FontWeight.bold,color: Colors.white,
-              ),),
+              width: 30,
+              height: 30,
+              decoration: BoxDecoration(
+                color: Colors.transparent,
+              ),
+              child: Icon(Icons.sunny ),
             ),
-            
-          ],
-         )
-      ],
-      
-      
-      )
+          ),
+
+        ],
+      ),
+       body: GridView(gridDelegate: SliverGridDelegate,
+       c,
+       ),
+     
     );
   }
 }
