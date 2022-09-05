@@ -40,9 +40,7 @@ class _HomePageState extends State<HomePage> {
 
         ],
       ),
-       body: GridView(gridDelegate: SliverGridDelegate,
-       c,
-       ),
+       
      
     );
   }
