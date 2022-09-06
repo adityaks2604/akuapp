@@ -1,3 +1,6 @@
+import 'dart:math';
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
  class HomePage extends StatefulWidget {
@@ -39,6 +42,67 @@ class _HomePageState extends State<HomePage> {
           ),
 
         ],
+      ),
+      body: GridView(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+      children: [
+        Center(
+          child: Container( padding: EdgeInsets.all(10), decoration: BoxDecoration(  
+            color: Colors.lightBlue, 
+          ), 
+            child: Text("hi")
+          ),
+        ),
+        Center(
+          child: Container( padding: EdgeInsets.all(10), decoration: BoxDecoration(
+             color: Colors.lightBlue,
+          ),
+            child: Text("hi")
+          ),
+        ),
+        Center(
+          child: Container( padding: EdgeInsets.all(10), decoration: BoxDecoration( 
+             color: Colors.lightBlue,
+          ),
+            child: Text("hi")
+          ),
+        ),
+        Center(
+          child: Container( padding: EdgeInsets.all(10), decoration: BoxDecoration(
+             color: Colors.lightBlue, 
+          ),
+            child: Text("hi")
+          ),
+        ),
+        Center(
+          child: Container( padding: EdgeInsets.all(10), decoration: BoxDecoration(
+             color: Colors.lightBlue,
+          ),
+            child: Text("hi")
+          ),
+        ),
+        Center(
+          child: Container( padding: EdgeInsets.all(10), decoration: BoxDecoration(  
+             color: Colors.lightBlue,
+          ),
+            child: Text("hi")
+          ),
+        ),
+        Center(
+          child: Container( padding: EdgeInsets.all(10), decoration: BoxDecoration( 
+             color: Colors.lightBlue,
+          ),
+            child: Text("hi")
+          ),
+        ),
+        Center(
+          child: Container( padding: EdgeInsets.all(10), decoration: BoxDecoration(
+             color: Colors.lightBlue,
+          ),
+            child: Text("hi")
+          ),
+        ),
+        
+      ],
       ),
        
      
