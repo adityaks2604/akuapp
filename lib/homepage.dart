@@ -2,6 +2,7 @@ import 'dart:math';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_app_aku/syllabus.dart';
 
  class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -124,18 +125,32 @@ class _HomePageState extends State<HomePage> {
                   color:  Colors.black87,offset: Offset(5.0,5.0,), blurRadius: 10, spreadRadius: 2,
                  ),],
                   ), 
-                    child: Column(
-                      children: [
-                        Expanded(
-                          child: Container(
-                             margin: EdgeInsets.all(10),padding: EdgeInsets.all(10),
-                        child: Image.asset('assets/images/syllabus.png', alignment: Alignment.center,))), 
-                        Container( margin: EdgeInsets.only(bottom: 0),height: 42, decoration: BoxDecoration(color: Colors.deepOrange  ,borderRadius: BorderRadius.only(bottomRight: Radius.circular(10),bottomLeft:Radius.circular(10))),width: double.infinity, padding: EdgeInsets.all(10), alignment: Alignment.bottomCenter,
-                        child: Text("Syllabus", style: TextStyle(
-                          fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white
-                        ),)) 
-                      ],
-                    ),
+                   child: InkWell(
+                           onTap:() {
+                                     Navigator.push(context, MaterialPageRoute(builder: (context)=>Sylabus()));
+                                  },
+                          child: Column(
+                            children: [
+                              // InkWell(
+                              //   onTap:() {
+                              //     Navigator.push(context, MaterialPageRoute(builder: (context)=>Sylabus()));
+                              //   },
+                               // child:  
+                                Expanded(
+                                  child: Container(
+                                       margin: EdgeInsets.all(10),padding: EdgeInsets.all(6),
+                                  child: Image.asset('assets/images/syllabus.png', alignment: Alignment.center,)),
+                                ),
+                               // ), 
+                              Container( margin: EdgeInsets.only(bottom: 0),height: 42, decoration: BoxDecoration(color: Colors.deepOrange  ,borderRadius: BorderRadius.only(bottomRight: Radius.circular(10),bottomLeft:Radius.circular(10))),width: double.infinity, padding: EdgeInsets.all(10), alignment: Alignment.bottomCenter,
+                              child: Text("Syllabus", style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white
+                              ),)) 
+                            ],
+                          ),
+                        ),
+                      
+                    
                   ),
                 ),
                 Center(
@@ -144,19 +159,24 @@ class _HomePageState extends State<HomePage> {
                   color:  Colors.black87,offset: Offset(5.0,5.0,), blurRadius: 10, spreadRadius: 2,
                  ),],
                   ),
-                   child: Column(
-                      children: [
-                        Expanded(
-                          child: Container(
-                             margin: EdgeInsets.all(10),padding: EdgeInsets.all(10), 
-                        child: Image.asset('assets/images/pyqp.png', alignment: Alignment.center,))), 
-                        Container( margin: EdgeInsets.only(bottom: 0),height: 42, decoration: BoxDecoration(color: Colors.deepOrange, 
-                        borderRadius: BorderRadius.only(bottomRight: Radius.circular(10),bottomLeft:Radius.circular(10))),width: double.infinity, padding: EdgeInsets.all(10) , alignment: Alignment.center,
-                        child: Text("previous year", textAlign: TextAlign.center, style: TextStyle( color: Colors.white,
-                          fontSize: 18, fontWeight: FontWeight.bold
-                        ),)) 
-                      ],
-                    ),
+                   child: InkWell( 
+                       onTap:() {
+                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>Sylabus()));
+                              },
+                     child: Column(
+                        children: [
+                          Expanded(
+                            child: Container(
+                               margin: EdgeInsets.all(10),padding: EdgeInsets.all(10), 
+                          child: Image.asset('assets/images/pyqp.png', alignment: Alignment.center,))), 
+                          Container( margin: EdgeInsets.only(bottom: 0),height: 42, decoration: BoxDecoration(color: Colors.deepOrange, 
+                          borderRadius: BorderRadius.only(bottomRight: Radius.circular(10),bottomLeft:Radius.circular(10))),width: double.infinity, padding: EdgeInsets.all(10) , alignment: Alignment.center,
+                          child: Text("previous year", textAlign: TextAlign.center, style: TextStyle( color: Colors.white,
+                            fontSize: 18, fontWeight: FontWeight.bold
+                          ),)) 
+                        ],
+                      ),
+                   ),
                   ),
                 ),
                 Center(
@@ -165,18 +185,23 @@ class _HomePageState extends State<HomePage> {
                   color:  Colors.black87,offset: Offset(5.0,5.0,), blurRadius: 10, spreadRadius: 2,
                  ),], 
                   ),       
-                    child: Column(
-                      children: [
-                        Expanded(
-                          child: Container(
-                             margin: EdgeInsets.all(10),padding: EdgeInsets.all(10),
-                        child: Image.asset('assets/images/holiday.png', alignment: Alignment.center,))), 
-                        Container( margin: EdgeInsets.only(bottom: 0),height: 42, decoration: BoxDecoration(color: Colors.deepOrange, 
-                        borderRadius: BorderRadius.only(bottomRight: Radius.circular(10),bottomLeft:Radius.circular(10))),width: double.infinity, padding: EdgeInsets.all(10), alignment: Alignment.bottomCenter,
-                        child: Text("Holiday", style: TextStyle(
-                          fontSize: 18, fontWeight: FontWeight.bold ,color: Colors.white  
-                        ),)) 
-                      ],
+                    child: InkWell(
+                       onTap:() {
+                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>Sylabus()));
+                              },
+                      child: Column(
+                        children: [
+                          Expanded(
+                            child: Container(
+                               margin: EdgeInsets.all(10),padding: EdgeInsets.all(10),
+                          child: Image.asset('assets/images/holiday.png', alignment: Alignment.center,))), 
+                          Container( margin: EdgeInsets.only(bottom: 0),height: 42, decoration: BoxDecoration(color: Colors.deepOrange, 
+                          borderRadius: BorderRadius.only(bottomRight: Radius.circular(10),bottomLeft:Radius.circular(10))),width: double.infinity, padding: EdgeInsets.all(10), alignment: Alignment.bottomCenter,
+                          child: Text("Holiday", style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold ,color: Colors.white  
+                          ),)) 
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -186,19 +211,24 @@ class _HomePageState extends State<HomePage> {
                   color:  Colors.black87,offset: Offset(5.0,5.0,), blurRadius: 10, spreadRadius: 2,
                  ),], 
                    ),
-                     child: Column(
-                      children: [
-                        Expanded(
-                          child: Container(
-                             margin: EdgeInsets.all(10),padding: EdgeInsets.all(20), 
-                        child: Image.asset('assets/images/telegram.png', alignment: Alignment.center,))), 
-                        Container( margin: EdgeInsets.only(bottom: 0), height: 42,decoration: BoxDecoration(color:Colors.deepOrange, 
-                        borderRadius: BorderRadius.only(bottomRight: Radius.circular(10),bottomLeft:Radius.circular(10))),width: double.infinity, padding: EdgeInsets.all(10), alignment: Alignment.bottomCenter,
-                        child: Text("Join Telegram ", style: TextStyle(
-                          fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white
-                        ),)) 
-                      ],
-                    ),  
+                     child: InkWell(
+                       onTap:() {
+                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>Sylabus()));
+                              },
+                       child: Column(
+                        children: [
+                          Expanded(
+                            child: Container(
+                               margin: EdgeInsets.all(10),padding: EdgeInsets.all(20), 
+                          child: Image.asset('assets/images/telegram.png', alignment: Alignment.center,))), 
+                          Container( margin: EdgeInsets.only(bottom: 0), height: 42,decoration: BoxDecoration(color:Colors.deepOrange, 
+                          borderRadius: BorderRadius.only(bottomRight: Radius.circular(10),bottomLeft:Radius.circular(10))),width: double.infinity, padding: EdgeInsets.all(10), alignment: Alignment.bottomCenter,
+                          child: Text("Join Telegram ", style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white
+                          ),)) 
+                        ],
+                                         ),
+                     ),  
                    ),
                  ),
                 // Center(
