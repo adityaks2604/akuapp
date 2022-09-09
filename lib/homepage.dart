@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepPurple, 
+      backgroundColor: Colors.grey, 
      appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -92,11 +92,27 @@ class _HomePageState extends State<HomePage> {
                   color:  Colors.black87,offset: Offset(5.0,5.0,), blurRadius: 10, spreadRadius: 2,
                  ),],
               ),
-              child: Image.asset('assets/images/student.png', alignment: Alignment.centerRight,),
+              child: Row( crossAxisAlignment: CrossAxisAlignment.center ,
+                children: [Container(margin: EdgeInsets.all(20), height: 120, alignment: Alignment.centerLeft, 
+                 child: Expanded(
+                   child: Text("Aku", style: TextStyle(
+                    fontSize: 50, fontWeight: FontWeight.bold
+                   ),),
+                 ),
+                ),
+                //SizedBox(width: 20,),
+                  Expanded(
+                    child: Container( alignment: Alignment.centerRight, height: 100, margin: EdgeInsets.all(10),
+                      child: Image.asset('assets/images/student.png', fit: BoxFit.fill, ),
+                      ),
+                  ),
+                ],
+              ),
             ),
-          ),
+          ), 
+          SizedBox(height: 22),
           Expanded(
-            child: Container( 
+            child: Container( margin: EdgeInsets.all(10),
               child: GridView(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
               children: [
                 
@@ -108,7 +124,18 @@ class _HomePageState extends State<HomePage> {
                   color:  Colors.black87,offset: Offset(5.0,5.0,), blurRadius: 10, spreadRadius: 2,
                  ),],
                   ), 
-                    child: Text("hi")
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child: Container(
+                             margin: EdgeInsets.all(10),padding: EdgeInsets.all(10),
+                        child: Image.asset('assets/images/syllabus.png', alignment: Alignment.center,))), 
+                        Container( margin: EdgeInsets.only(bottom: 0),height: 42, decoration: BoxDecoration(color: Colors.deepOrange  ,borderRadius: BorderRadius.only(bottomRight: Radius.circular(10),bottomLeft:Radius.circular(10))),width: double.infinity, padding: EdgeInsets.all(10), alignment: Alignment.bottomCenter,
+                        child: Text("Syllabus", style: TextStyle(
+                          fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white
+                        ),)) 
+                      ],
+                    ),
                   ),
                 ),
                 Center(
@@ -117,7 +144,19 @@ class _HomePageState extends State<HomePage> {
                   color:  Colors.black87,offset: Offset(5.0,5.0,), blurRadius: 10, spreadRadius: 2,
                  ),],
                   ),
-                    child: Text("hi")
+                   child: Column(
+                      children: [
+                        Expanded(
+                          child: Container(
+                             margin: EdgeInsets.all(10),padding: EdgeInsets.all(10), 
+                        child: Image.asset('assets/images/pyqp.png', alignment: Alignment.center,))), 
+                        Container( margin: EdgeInsets.only(bottom: 0),height: 42, decoration: BoxDecoration(color: Colors.deepOrange, 
+                        borderRadius: BorderRadius.only(bottomRight: Radius.circular(10),bottomLeft:Radius.circular(10))),width: double.infinity, padding: EdgeInsets.all(10) , alignment: Alignment.center,
+                        child: Text("previous year", textAlign: TextAlign.center, style: TextStyle( color: Colors.white,
+                          fontSize: 18, fontWeight: FontWeight.bold
+                        ),)) 
+                      ],
+                    ),
                   ),
                 ),
                 Center(
@@ -125,8 +164,20 @@ class _HomePageState extends State<HomePage> {
                      color: Colors.white  , borderRadius: BorderRadius.circular(10),boxShadow: [BoxShadow(
                   color:  Colors.black87,offset: Offset(5.0,5.0,), blurRadius: 10, spreadRadius: 2,
                  ),], 
-                  ),
-                    child: Text("hi")
+                  ),       
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child: Container(
+                             margin: EdgeInsets.all(10),padding: EdgeInsets.all(10),
+                        child: Image.asset('assets/images/holiday.png', alignment: Alignment.center,))), 
+                        Container( margin: EdgeInsets.only(bottom: 0),height: 42, decoration: BoxDecoration(color: Colors.deepOrange, 
+                        borderRadius: BorderRadius.only(bottomRight: Radius.circular(10),bottomLeft:Radius.circular(10))),width: double.infinity, padding: EdgeInsets.all(10), alignment: Alignment.bottomCenter,
+                        child: Text("Holiday", style: TextStyle(
+                          fontSize: 18, fontWeight: FontWeight.bold ,color: Colors.white  
+                        ),)) 
+                      ],
+                    ),
                   ),
                 ),
                 Center(
@@ -135,7 +186,19 @@ class _HomePageState extends State<HomePage> {
                   color:  Colors.black87,offset: Offset(5.0,5.0,), blurRadius: 10, spreadRadius: 2,
                  ),], 
                    ),
-                     child: Text("hi")
+                     child: Column(
+                      children: [
+                        Expanded(
+                          child: Container(
+                             margin: EdgeInsets.all(10),padding: EdgeInsets.all(20), 
+                        child: Image.asset('assets/images/telegram.png', alignment: Alignment.center,))), 
+                        Container( margin: EdgeInsets.only(bottom: 0), height: 42,decoration: BoxDecoration(color:Colors.deepOrange, 
+                        borderRadius: BorderRadius.only(bottomRight: Radius.circular(10),bottomLeft:Radius.circular(10))),width: double.infinity, padding: EdgeInsets.all(10), alignment: Alignment.bottomCenter,
+                        child: Text("Join Telegram ", style: TextStyle(
+                          fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white
+                        ),)) 
+                      ],
+                    ),  
                    ),
                  ),
                 // Center(
