@@ -2,7 +2,10 @@ import 'dart:math';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_app_aku/holiday.dart';
 import 'package:flutter_app_aku/syllabus.dart';
+
+import 'pyqp.dart';
 
  class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -161,7 +164,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                    child: InkWell( 
                        onTap:() {
-                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>Sylabus()));
+                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>Pyqp()));
                               },
                      child: Column(
                         children: [
@@ -176,7 +179,7 @@ class _HomePageState extends State<HomePage> {
                           ),)) 
                         ],
                       ),
-                   ),
+                   ), 
                   ),
                 ),
                 Center(
@@ -187,7 +190,7 @@ class _HomePageState extends State<HomePage> {
                   ),       
                     child: InkWell(
                        onTap:() {
-                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>Sylabus()));
+                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>Holiday()));
                               },
                       child: Column(
                         children: [

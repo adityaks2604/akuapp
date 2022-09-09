@@ -12,7 +12,7 @@ class _SylabusState extends State<Sylabus> {
   Widget build(BuildContext context) {
     return Scaffold(  
       appBar: AppBar(
-       
+       title: Text("syllabus")
       ),
     ); 
   }
